@@ -1,5 +1,5 @@
 import {Component} from 'angular2/core';
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
+import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
 import {HeaderComponent} from './header.component';
 import {HomeComponent} from './home.component';
 import {AboutComponent} from './about.component';

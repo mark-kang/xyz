@@ -1,31 +1,31 @@
 import {Component, OnInit} from 'angular2/core';
-import {Product} from './product';
-import {ProductService} from './product.service';
+import {Item} from './item';
+import {ItemService} from './item.service';
 import {CategoryComponent} from './category.component';
 
 @Component({
     selector: 'my-products',
     templateUrl: 'html/products.html',
-    providers: [ProductService]
+    providers: [ItemService]
 })
 export class ProductsComponent implements OnInit {
     
-    products: Product[];
-    selectedProduct:Product;
+    items: Item[];
+    selectedProduct:Item;
     
-    constructor(private _productService: ProductService) { }
+    constructor(private _itemService: ItemService) { }
     
     getProducts() {
-        this._productService.getProducts().then(products => this.products = products);
+        this._itemService.getItems().then(items => this.items = items);
     }
   
     ngOnInit() {
         this.getProducts();
     } 
     
-    onSelect(product: Product) { 
-        console.log(this.products);
-        console.log(product);
-        this.selectedProduct = product; 
+    onSelect(item: Item) { 
+        console.log(this.items);
+        console.log(item);
+        this.selectedProduct = item; 
     }
 }

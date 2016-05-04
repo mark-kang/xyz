@@ -11,7 +11,7 @@ System.register(['./mock-products', 'angular2/core'], function(exports_1, contex
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var mock_products_1, core_1;
-    var ProductService;
+    var ItemService;
     return {
         setters:[
             function (mock_products_1_1) {
@@ -21,20 +21,25 @@ System.register(['./mock-products', 'angular2/core'], function(exports_1, contex
                 core_1 = core_1_1;
             }],
         execute: function() {
-            ProductService = (function () {
-                function ProductService() {
+            ItemService = (function () {
+                function ItemService() {
                 }
-                ProductService.prototype.getProducts = function () {
-                    return Promise.resolve(mock_products_1.PRODUCTS);
+                ItemService.prototype.getItems = function () {
+                    return Promise.resolve(mock_products_1.ITEMS);
                 };
-                ProductService = __decorate([
+                ItemService.prototype.getItemById = function (id) {
+                    console.log(mock_products_1.ITEMS);
+                    console.log(mock_products_1.ITEMS[0]);
+                    return Promise.resolve(mock_products_1.ITEMS[0]);
+                };
+                ItemService = __decorate([
                     core_1.Injectable(), 
                     __metadata('design:paramtypes', [])
-                ], ProductService);
-                return ProductService;
+                ], ItemService);
+                return ItemService;
             }());
-            exports_1("ProductService", ProductService);
+            exports_1("ItemService", ItemService);
         }
     }
 });
-//# sourceMappingURL=product.service.js.map
+//# sourceMappingURL=item.service.js.map

@@ -1,4 +1,4 @@
-System.register(['angular2/core', './product.service'], function(exports_1, context_1) {
+System.register(['angular2/core', './item.service'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,40 +10,40 @@ System.register(['angular2/core', './product.service'], function(exports_1, cont
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, product_service_1;
+    var core_1, item_service_1;
     var ProductsComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             },
-            function (product_service_1_1) {
-                product_service_1 = product_service_1_1;
+            function (item_service_1_1) {
+                item_service_1 = item_service_1_1;
             }],
         execute: function() {
             ProductsComponent = (function () {
-                function ProductsComponent(_productService) {
-                    this._productService = _productService;
+                function ProductsComponent(_itemService) {
+                    this._itemService = _itemService;
                 }
                 ProductsComponent.prototype.getProducts = function () {
                     var _this = this;
-                    this._productService.getProducts().then(function (products) { return _this.products = products; });
+                    this._itemService.getItems().then(function (items) { return _this.items = items; });
                 };
                 ProductsComponent.prototype.ngOnInit = function () {
                     this.getProducts();
                 };
-                ProductsComponent.prototype.onSelect = function (product) {
-                    console.log(this.products);
-                    console.log(product);
-                    this.selectedProduct = product;
+                ProductsComponent.prototype.onSelect = function (item) {
+                    console.log(this.items);
+                    console.log(item);
+                    this.selectedProduct = item;
                 };
                 ProductsComponent = __decorate([
                     core_1.Component({
                         selector: 'my-products',
                         templateUrl: 'html/products.html',
-                        providers: [product_service_1.ProductService]
+                        providers: [item_service_1.ItemService]
                     }), 
-                    __metadata('design:paramtypes', [product_service_1.ProductService])
+                    __metadata('design:paramtypes', [item_service_1.ItemService])
                 ], ProductsComponent);
                 return ProductsComponent;
             }());
