@@ -6,29 +6,29 @@
                     <div class="row">
                          <div class=" col-md-6 col-sm-6 wow fadeInLeft">
                              <div class="client-box">
-                                 <img src="images/client/01.png" alt="" class="img-responsive center-block">
+                                 <img (click)="setBigImg(1)" src="{{selectedItem.img1}}" alt="" class="img-responsive center-block">
                              </div>
                         </div>
                          <div class=" col-md-6 col-sm-6 wow fadeInLeft">
                              <div class="client-box">
-                                 <img src="images/client/02.png" alt="" class="img-responsive center-block">
+                                 <img (click)="setBigImg(2)" src="{{selectedItem.img2}}" alt="" class="img-responsive center-block">
                              </div>
                         </div>
                          <div class=" col-md-6 col-sm-6 wow fadeInLeft">
                              <div class="client-box">
-                                 <img src="images/client/03.png" alt="" class="img-responsive center-block">
+                                 <img (click)="setBigImg(3)" src="{{selectedItem.img3}}" alt="" class="img-responsive center-block">
                              </div>
                         </div>
                          <div class=" col-md-6 col-sm-6 wow fadeInLeft">
                              <div class="client-box">
-                                 <img src="images/client/04.png" alt="" class="img-responsive center-block">
+                                 <img (click)="setBigImg(4)" src="{{selectedItem.img4}}" alt="" class="img-responsive center-block">
                              </div>
                         </div>
                     </div>
                 </div>
                 <div class=" col-md-6 col-sm-6 wow slideInRight">
-                    <div class="client-box">
-                        <img src="images/bg/bedroom.jpg" alt="" >
+                    <div>
+                        <img src="images/item/{{bigImgPath}}" alt="" >
                     </div>
                 </div>
             </div><!-- section row end -->
@@ -37,20 +37,24 @@
                     <div class="contact-info">
                 		<ul>
                 			<li>
-                				<h4>Item Num#</h4>
-                				<p>{{selectedItem.id}}</p>
+                				<h4>Item</h4>
+                				<p>{{selectedItem.itemNo}}</p>
                 			</li>
                 			<li>
-                				<h4>Name</h4>
-                				<p>{{selectedItem.name}}</p>
-                			</li>
-                			<li>
-                				<h4>Description</h4>
-                				<p>Lorem ipsum dolor sitamet, consectetur adipisicing elit. Voluptatum consequatur corporis est vitae hic asperiores accusantium autem soluta.</p>
+                				<h4>Details</h4>
+                				<p>{{selectedItem.detail}}</p>
                 			</li>
                 			<li>
                 				<h4>Size</h4>
-                				<p>Lorem ipsum dolor sitamet, consectetur adipisicing elit. Voluptatum consequatur corporis est vitae hic asperiores accusantium autem soluta.</p>
+                				<p>{{selectedItem.size}}</p>
+                			</li>
+                			<li>
+                				<h4>Color</h4>
+                				<p>{{selectedItem.color}}</p>
+                			</li>
+                			<li>
+                				<h4>Maintenance</h4>
+                				<p>{{selectedItem.maintenance}}</p>
                 			</li>
                 		</ul>
                     </div>

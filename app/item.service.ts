@@ -8,7 +8,7 @@ export class ItemService {
   }
   getItemById(id:number) {
     console.log(ITEMS);
-    console.log(ITEMS[0]);
+    console.log(ITEMS[1]);
     return Promise.resolve(ITEMS[0]);
   }
 }

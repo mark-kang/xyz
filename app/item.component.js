@@ -1,4 +1,4 @@
-System.register(['angular2/core', './item.service'], function(exports_1, context_1) {
+System.register(['angular2/core', './item', './item.service'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,12 +10,15 @@ System.register(['angular2/core', './item.service'], function(exports_1, context
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, item_service_1;
+    var core_1, item_1, item_service_1;
     var ItemComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (item_1_1) {
+                item_1 = item_1_1;
             },
             function (item_service_1_1) {
                 item_service_1 = item_service_1_1;
@@ -24,16 +27,21 @@ System.register(['angular2/core', './item.service'], function(exports_1, context
             ItemComponent = (function () {
                 function ItemComponent(_itemService) {
                     this._itemService = _itemService;
+                    this.selectedItem = new item_1.Item;
+                    this.selectedImgNum = 1;
+                    this.bigImgPath = "1-1-b.png";
                 }
                 ItemComponent.prototype.getItem = function (id) {
                     var _this = this;
-                    this._itemService.getItemById(id).then(function (item) {
-                        _this.selectedItem = item;
-                        console.log(_this.selectedItem);
-                    });
+                    this._itemService.getItemById(id).then(function (item) { return _this.selectedItem = item; });
                 };
                 ItemComponent.prototype.ngOnInit = function () {
                     this.getItem(1);
+                };
+                ItemComponent.prototype.setBigImg = function (imgNum) {
+                    this.selectedImgNum = imgNum;
+                    this.bigImgPath = this.selectedItem.itemNo + "-" + imgNum + "-b.png";
+                    console.log("bigImgPath = " + this.bigImgPath);
                 };
                 ItemComponent = __decorate([
                     core_1.Component({

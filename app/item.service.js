@@ -29,7 +29,7 @@ System.register(['./mock-products', 'angular2/core'], function(exports_1, contex
                 };
                 ItemService.prototype.getItemById = function (id) {
                     console.log(mock_products_1.ITEMS);
-                    console.log(mock_products_1.ITEMS[0]);
+                    console.log(mock_products_1.ITEMS[1]);
                     return Promise.resolve(mock_products_1.ITEMS[0]);
                 };
                 ItemService = __decorate([

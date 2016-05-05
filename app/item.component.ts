@@ -9,18 +9,25 @@ import {ItemService} from './item.service';
     providers: [ItemService]
 })
 export class ItemComponent implements OnInit { 
-    selectedItem: Item;
+    
+    public selectedItem = new Item;
+    public selectedImgNum = 1;
+    public bigImgPath = "1-1-b.png";
     
     constructor(private _itemService: ItemService) { }
     
     getItem(id:number) {
-        this._itemService.getItemById(id).then(item => {
-            this.selectedItem = item; console.log(this.selectedItem);
-        });
+        this._itemService.getItemById(id).then(item => this.selectedItem = item );
     }
   
     ngOnInit() {
         this.getItem(1);
     } 
     
+    setBigImg(imgNum: number) { 
+        this.selectedImgNum = imgNum;
+        
+        this.bigImgPath = this.selectedItem.itemNo + "-" + imgNum + "-b.png";
+        console.log("bigImgPath = " + this.bigImgPath);
+    }
 }
