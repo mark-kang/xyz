@@ -319,6 +319,10 @@ h6 {
     padding: 80px 0px;
 }
 
+.section-item{
+    padding: 140px 0px;
+}
+
 /*======================================================
      navigation 
 ==========================================================*/
@@ -365,7 +369,7 @@ ul.navbar-nav > li > a {
     SLIDER SECTION
 ===============================================*/
 #home-section {
-    background: url("../images/bg/slider.jpg");
+    background: url("../images/bg/main.jpg");
     background-size: cover;
     position: relative;
     overflow: hidden;
@@ -589,7 +593,7 @@ ul.navbar-nav > li > a {
 /*==================section services ==================*/
 
 #section-services-head{
-     background: url("../images/bg/portfolio1.jpg") fixed 50% 50%;
+     background: url("../images/bg/bedroom.jpg") fixed 50% 50%;
     background-size: cover;
     position: relative;
 }
@@ -621,7 +625,7 @@ ul.navbar-nav > li > a {
 
 /* ====================section portfolio========================*/
 #section-portfolio-head{
-    background: url("../images/bg/3.jpg") fixed 50% 50%;
+    background: url("../images/bg/portfolio1.jpg") fixed 50% 50%;
     background-size: cover;
     position: relative;
 }
@@ -714,12 +718,19 @@ ul.navbar-nav > li > a {
     border: 1px solid#eee;
     text-align: center;
     padding: 40px 0px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.client-box-noborder{
+    border: 0px solid#eee;
+    text-align: center;
+    padding: 40px 0px;
+    margin-bottom: 10px;
 }
 
 .testimonial-col{
     background: url("../images/bg/32.jpg");
-    background-size: cover;
+    background-size: cover ;
     padding: 130px 50px;
 }
 

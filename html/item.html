@@ -1,0 +1,62 @@
+    <!-- section clients start -->
+    <section id="section-client" class="section-item">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 ">
+                    <div class="row">
+                         <div class=" col-md-6 col-sm-6 wow fadeInLeft">
+                             <div class="client-box">
+                                 <img (click)="setBigImg(1)" src="{{selectedItem.img1}}" alt="" class="img-responsive center-block">
+                             </div>
+                        </div>
+                         <div class=" col-md-6 col-sm-6 wow fadeInLeft">
+                             <div class="client-box">
+                                 <img (click)="setBigImg(2)" src="{{selectedItem.img2}}" alt="" class="img-responsive center-block">
+                             </div>
+                        </div>
+                         <div class=" col-md-6 col-sm-6 wow fadeInLeft">
+                             <div class="client-box">
+                                 <img (click)="setBigImg(3)" src="{{selectedItem.img3}}" alt="" class="img-responsive center-block">
+                             </div>
+                        </div>
+                         <div class=" col-md-6 col-sm-6 wow fadeInLeft">
+                             <div class="client-box">
+                                 <img (click)="setBigImg(4)" src="{{selectedItem.img4}}" alt="" class="img-responsive center-block">
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-md-6 col-sm-6 wow slideInRight">
+                    <div>
+                        <img src="images/item/{{bigImgPath}}" alt="" >
+                    </div>
+                </div>
+            </div><!-- section row end -->
+            <div class="row">
+                <div class="col-md-6 ">
+                    <div class="contact-info">
+                        <h4>Item</h4>
+                        <p>{{selectedItem.itemNo}}</p>
+                        <h4>Details</h4>
+                        <p>{{selectedItem.detail}}</p>
+                        <h4>Size</h4>
+                        <p>{{selectedItem.size}}</p>
+                        <h4>Color</h4>
+                        <p>{{selectedItem.color}}</p>
+                        <h4>Maintenance</h4>
+                        <p>{{selectedItem.maintenance}}</p>
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="row">
+                        <div class=" col-md-12 col-sm-12 wow pulse">
+                            <div class="client-box-noborder">
+                               <a href="/category" class="hover-icon"><i class="icon icon-direction"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- container end -->
+    </section>
+    <!-- section clients end -->
